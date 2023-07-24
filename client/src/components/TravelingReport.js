@@ -16,8 +16,8 @@ const TravelingReport = () => {
   };
 
   return (
-    <div>
-      <h2>Traveling Report</h2>
+    <main>
+      <h2>Reporte de Pedidos en Viaje</h2>
       <input
         type="date"
         value={startDate}
@@ -28,15 +28,15 @@ const TravelingReport = () => {
         value={endDate}
         onChange={(e) => setEndDate(e.target.value)}
       />
-      <button onClick={handleFetchReport}>Fetch Report</button>
+      <button onClick={handleFetchReport}>Obtener Reporte</button>
       {orders.map((order) => (
         <div key={order._id}>
-          <p>Order ID: {order._id}</p>
-          <p>Client: {order.client}</p>
-          {/* Add other relevant order details */}
+          <p><b>ID:</b> {order._id}</p>
+          <p><b>Cliente:</b> {order.client}</p>
+          <p>Status: {order.status}</p>
         </div>
       ))}
-    </div>
+    </main>
   );
 };
 

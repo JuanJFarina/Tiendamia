@@ -4,6 +4,7 @@ import OrderList from './components/OrderList';
 import OrderDetail from './components/OrderDetail';
 import ApproveAndNearDeliveryReport from './components/ApproveAndNearDeliveryReport';
 import TravelingReport from './components/TravelingReport';
+import './App.css';
 
 const App = () => {
   return (
@@ -12,16 +13,16 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/">Order List</Link>
+              <Link to="/">Lista de Pedidos</Link>
             </li>
             <li>
-              <Link to="/order-detail">Order Detail</Link>
+              <Link to="/order-detail">Detalles de Pedido</Link>
             </li>
             <li>
-              <Link to="/approve-near-delivery-report">Approve and Near Delivery Report</Link>
+              <Link to="/approve-near-delivery-report">Reporte de Pedidos Aprobados y por Entregar</Link>
             </li>
             <li>
-              <Link to="/traveling-report">Traveling Report</Link>
+              <Link to="/traveling-report">Reporte de Pedidos en Viaje</Link>
             </li>
           </ul>
         </nav>

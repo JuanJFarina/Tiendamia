@@ -18,16 +18,16 @@ const OrderList = () => {
   };
 
   return (
-    <div>
-      <h2>Order List</h2>
+    <main>
+      <h2>Lista de Pedidos</h2>
       {orders.map((order) => (
         <div key={order._id}>
-          <p>Order ID: {order._id}</p>
-          <p>Client: {order.client}</p>
+          <p><b>ID:</b> {order._id}</p>
+          <p>Cliente: {order.client}</p>
           {/* Add other relevant order details */}
         </div>
       ))}
-    </div>
+    </main>
   );
 };
 
