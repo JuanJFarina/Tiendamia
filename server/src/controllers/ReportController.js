@@ -8,9 +8,11 @@ const getApproveAndNearDeliveryOrders = async (req, res) => {
     twoDaysLater.setDate(twoDaysLater.getDate() + 2);
 
     const orders = await Order.find({
-      status: 'Approve',
-      shippingPromise: { $lt: twoDaysLater },
-      shippingPromise: { $gte: currentDate },
+      $and: [
+        { status: 'Approve' },
+        { shippingPromise: { $lt: twoDaysLater } },
+        { shippingPromise: { $gte: currentDate } },
+      ],
     });
 
     res.json(orders);
